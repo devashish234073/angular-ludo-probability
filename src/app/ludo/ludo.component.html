@@ -1,0 +1,19 @@
+<font size="2">{{"Start Time: "+startTime}}</font>
+<br>{{"1/6="+(1/6).toFixed(3)}}
+<table>
+<tr><td colspan="5"><img src={{currImg}}></td>
+  <td>
+    <p *ngFor="let n of counts; let i = index" [ngStyle]="{width: getWidth(i)}"></p>
+  </td>
+  <td><button (click)="togglePause()">{{caption}}</button></td></tr>
+<tr><td>Num</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+<tr><td>Count</td><td>{{counts[0]}}</td><td>{{counts[1]}}</td><td>{{counts[2]}}</td><td>{{counts[3]}}</td><td>{{counts[4]}}</td><td>{{counts[5]}}</td></tr>
+<tr><td>Probability</td>
+  <td [ngClass]="{above:probab[0]>=0.16,below:probab[0]<0.16}">{{probab[0]}}</td>
+  <td [ngClass]="{above:probab[1]>=0.16,below:probab[1]<0.16}">{{probab[1]}}</td>
+  <td [ngClass]="{above:probab[2]>=0.16,below:probab[2]<0.16}">{{probab[2]}}</td>
+  <td [ngClass]="{above:probab[3]>=0.16,below:probab[3]<0.16}">{{probab[3]}}</td>
+  <td [ngClass]="{above:probab[4]>=0.16,below:probab[4]<0.16}">{{probab[4]}}</td>
+  <td [ngClass]="{above:probab[5]>=0.16,below:probab[5]<0.16}">{{probab[5]}}</td>
+</tr>
+</table>
